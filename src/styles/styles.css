@@ -5,7 +5,7 @@
 
 body {
   margin: 0 auto;
-  background-color: rgb(51, 39, 94);
+  background-color: rgb(61, 50, 107);
   color: white;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 500;
@@ -41,13 +41,12 @@ h3 {
 }
 
 .location-name {
-  font-size: 45px;  
+  font-size: 55px;  
   padding: 40px 0 20px 0;
-  background-color: rgb(51, 39, 94);
 }
 
 .location-info {
-  font-size: 15px;
+  font-size: 16px;
   display: flex;
   justify-content: space-around;
 }
@@ -60,5 +59,68 @@ h3 {
   color: rgb(240, 240, 63);
 }
 
+ul {
+  padding: 0;
+  list-style-type: none;
+}
 
 
+.residents-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  place-content: center;
+}
+
+.resident-card {
+  background-color: rgb(63, 26, 67);
+  width: fit-content;
+  border: solid;
+  margin: 50px 100px 50px 100px;
+}
+
+.resident-info {
+  margin-top: 10px;
+}
+
+.character-name {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.status {
+  position: absolute;
+  width: fit-content;
+  margin-top: -30px;
+  font-weight: 500;
+  font-size: 13px;
+  color: white;
+  background-color: rgb(63, 26, 67);
+  border-radius: 0 20% 20% 0;
+  display: flex;
+  gap: 5px;
+  place-items: center;
+}
+
+.status-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+li {
+  text-align: left;
+  margin-left: 10%;
+}
+
+li b {
+  font-size: 12px;
+  color:rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+}
+
+li p {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0 10px 0;
+}

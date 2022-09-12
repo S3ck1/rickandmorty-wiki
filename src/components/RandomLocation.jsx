@@ -1,18 +1,5 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
 
-const RandomLocation = () => {
-  const [location, setLocation] = useState({});
-
-  //Gets a random location from API
-  useEffect(() => {
-    const randomLocationID = Math.floor(Math.random() * 126) + 1;
-    axios
-      .get(`https://rickandmortyapi.com/api/location/${randomLocationID}`)
-      .then((res) => setLocation(res.data));
-  }, []);
-
-  console.log(location);
+const RandomLocation = ({location}) => {
 
   return (
     <div className="location-container">
