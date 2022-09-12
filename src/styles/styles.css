@@ -156,8 +156,7 @@ ul {
 
 @media (max-width: 430px) {
   .residents-container {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: auto auto;
     place-items: center;
     margin: auto;
     margin-top: 50px;
@@ -218,15 +217,19 @@ li p {
 }
 
 @media (max-width: 430px) {
+
+  .status {
+    font-size: 8px
+  }
   .character-name {
-    font-size: 16px
+    font-size: 15px
   }
 
   li b {
-    font-size: 11px;
+    font-size: 8.5px;
   }
 
   li p {
-    font-size: 15px
+    font-size: 12px
   }
 }
