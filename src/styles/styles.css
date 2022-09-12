@@ -1,0 +1,48 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  margin: 0 auto;
+  background-color: rgb(51, 39, 94);
+  color: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+}
+
+.main-container {
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  height: 935px;
+}
+
+.main-container input {
+  width: 550px;
+  height: 40px;
+  margin-top: 520px;
+  background-color: rgba(255, 255, 255, 0.489);
+  border: none;
+}
+
+.location-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: fit-content;
+}
+
+.location-info {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.location-name {
+  font-size: 50px;  
+}
+
+
+
