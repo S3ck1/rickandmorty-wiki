@@ -23,6 +23,15 @@ h3 {
   height: 935px;
 }
 
+@media (max-width: 430px) {
+  .main-container {
+    background-position: 49.5% 30%;
+    background-size: 250%;
+    margin-right: -18px ;
+    height: 530px;
+  }
+}
+
 .input-container {
   display: flex;
   flex-direction: column;
@@ -46,6 +55,29 @@ h3 {
   margin: auto;
 }
 
+@media (max-width: 830px) {
+  .input-container input {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 430px) {
+  .input-container {
+    gap: 10px
+  }
+
+  .input-container input {
+    font-size: 15px;
+    width: 165px;
+    height: 30px;
+    margin-top: 280px;
+  }
+
+  .input-container button {
+    height: 30px;
+  }
+}
+
 .location-container {
   display: flex;
   flex-direction: column;
@@ -60,10 +92,31 @@ h3 {
   padding: 40px 0 20px 0;
 }
 
+
 .location-info {
   font-size: 16px;
   display: flex;
   justify-content: space-around;
+}
+
+@media (max-width: 830px) {
+  .location-name {
+    font-size: 45px;
+  }
+  .location-info {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 830px) {
+  .location-name {
+    font-size: 25px;
+  }
+  .location-info {
+    font-size: 15px;
+    flex-direction: column;
+    margin: auto;
+  }
 }
 
 .location-info div{
@@ -79,7 +132,6 @@ ul {
   list-style-type: none;
 }
 
-
 .residents-container {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -91,6 +143,31 @@ ul {
   width: fit-content;
   border: solid;
   margin: 50px 100px 50px 100px;
+}
+
+@media (max-width: 830px) {
+  .residents-container {
+    grid-template-columns: auto auto;
+  }
+  .resident-card {
+    margin: 25px 50px 25px 50px;
+  }
+}
+
+@media (max-width: 430px) {
+  .residents-container {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .resident-img-container img {
+    width: 150px;
+  }
+  .resident-card {
+    margin: 10px;
+  }
 }
 
 .resident-info {
@@ -138,4 +215,18 @@ li p {
   font-size: 18px;
   font-weight: 500;
   margin: 10px 0 10px 0;
+}
+
+@media (max-width: 430px) {
+  .character-name {
+    font-size: 16px
+  }
+
+  li b {
+    font-size: 11px;
+  }
+
+  li p {
+    font-size: 15px
+  }
 }
