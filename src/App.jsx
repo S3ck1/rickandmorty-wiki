@@ -20,13 +20,9 @@ function App() {
 
   //Gets all locations
 
-  const onChange = (event) => {
-    setInputValue(event.target.value);
-  };
-
-  const onSearch = (searchTerm) => {
+  const onSearch = () => {
     axios
-      .get(`https://rickandmortyapi.com/api/location/${searchTerm}`)
+      .get(`https://rickandmortyapi.com/api/location/${inputValue}`)
       .then((res) => setLocation(res.data));
     infoRef.current?.scrollIntoView({behavior: 'smooth'});
   }
@@ -42,16 +38,16 @@ function App() {
             type="text"
             placeholder="  Search location by ID"
             value={inputValue}
-            onChange={onChange}
+            onChange={(e) => setInputValue(e.target.value)}
           />
-          <button onClick={() => onSearch(inputValue)}> Search </button>
+          <button onClick={onSearch}> Search </button>
         </div>
       </div>
       <div ref={infoRef}></div>
       <RandomLocation location={location} />
       <div className="residents-container">
         {location?.residents?.map((characterEndpoint) => (
-          <ResidentInfo characterEndpoint={characterEndpoint} />
+          <ResidentInfo characterEndpoint={characterEndpoint} key={characterEndpoint}/>
         ))}
       </div>
     </div>
