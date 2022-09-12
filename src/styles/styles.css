@@ -11,6 +11,10 @@ body {
   font-weight: 500;
 }
 
+h3 {
+  margin: 0;
+}
+
 .main-container {
   margin: 0;
   background-size: cover;
@@ -33,15 +37,27 @@ body {
   justify-content: center;
   margin: auto;
   width: fit-content;
-}
-
-.location-info {
-  display: flex;
-  justify-content: space-evenly;
+  height: fit-content;
 }
 
 .location-name {
-  font-size: 50px;  
+  font-size: 45px;  
+  padding: 40px 0 20px 0;
+  background-color: rgb(51, 39, 94);
+}
+
+.location-info {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.location-info div{
+  width: 200px;
+}
+
+.location-info h3 {
+  color: rgb(240, 240, 63);
 }
 
 
