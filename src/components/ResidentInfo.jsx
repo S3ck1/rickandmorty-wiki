@@ -10,8 +10,6 @@ const ResidentInfo = ({ characterEndpoint }) => {
     .then((res) => setCharacter(res.data));
 }, []);
 
-  console.log(character);
-
   return (
     <div className="resident-card">
         <div className="resident-img-container">

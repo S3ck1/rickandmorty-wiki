@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./styles/styles.css";
 import background from "./assets/1.png";
 import RandomLocation from "./components/RandomLocation";
@@ -7,6 +7,8 @@ import ResidentInfo from "./components/ResidentInfo";
 
 function App() {
   const [location, setLocation] = useState({});
+  const [inputValue, setInputValue] = useState('');
+  const infoRef = useRef(null); 
 
   //Gets a random location from API
   useEffect(() => {
@@ -16,7 +18,18 @@ function App() {
       .then((res) => setLocation(res.data));
   }, []);
 
-  console.log(location);
+  //Gets all locations
+
+  const onChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const onSearch = (searchTerm) => {
+    axios
+      .get(`https://rickandmortyapi.com/api/location/${searchTerm}`)
+      .then((res) => setLocation(res.data));
+    infoRef.current?.scrollIntoView({behavior: 'smooth'});
+  }
 
   return (
     <div className="App">
@@ -24,12 +37,21 @@ function App() {
         style={{ backgroundImage: `url(${background})` }}
         className="main-container"
       >
-        <input type="text" placeholder="  Type a location name" />
+        <div className="input-container">
+          <input
+            type="text"
+            placeholder="  Search location by ID"
+            value={inputValue}
+            onChange={onChange}
+          />
+          <button onClick={() => onSearch(inputValue)}> Search </button>
+        </div>
       </div>
+      <div ref={infoRef}></div>
       <RandomLocation location={location} />
       <div className="residents-container">
         {location?.residents?.map((characterEndpoint) => (
-          <ResidentInfo characterEndpoint={characterEndpoint}/>
+          <ResidentInfo characterEndpoint={characterEndpoint} />
         ))}
       </div>
     </div>
