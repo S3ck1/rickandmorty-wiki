@@ -15,7 +15,7 @@ function App() {
     const randomLocationID = Math.floor(Math.random() * 126) + 1;
     axios
       .get(`https://rickandmortyapi.com/api/location/${randomLocationID}`)
-      .then((res) => setLocation(res.data));
+      .then((res) => console.log(res))
   }, []);
 
   //Gets all locations
@@ -26,6 +26,8 @@ function App() {
       .then((res) => setLocation(res.data));
     infoRef.current?.scrollIntoView({behavior: 'smooth'});
   }
+
+  
 
   return (
     <div className="App">
