@@ -38,7 +38,7 @@ function App() {
         <div className="input-container">
           <input
             type="text"
-            placeholder="  Search location by ID"
+            placeholder="  Search location by ID (From 1 to 126) "
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
           />

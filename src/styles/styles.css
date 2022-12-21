@@ -139,10 +139,16 @@ ul {
 }
 
 .resident-card {
-  background-color: rgb(63, 26, 67);
+  background-color: rgb(64, 33, 67);
   width: fit-content;
+  max-width: 300px;
   border: solid;
   margin: 50px 100px 50px 100px;
+}
+
+.resident-card:hover {
+  cursor: pointer;
+  background-color: rgb(82, 44, 87);
 }
 
 @media (max-width: 830px) {
